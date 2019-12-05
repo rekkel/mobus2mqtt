@@ -1,0 +1,24 @@
+descriptor-schema-version: "2.7"
+
+info:
+  name: "Modbus2MQTT"
+  description: "ModBus to MQTT broket for arm64v8"
+  version: "1.0"
+  author-link: "http://www.modbus.com"
+  author-name: "Rick Ekkelboom"
+
+app:
+  cpuarch: "aarch64"
+  type: "docker"
+  resources:
+    profile: c1.tiny
+    network:
+      -
+        interface-name: eth0
+        ports:
+          tcp: ["502"]
+
+  startup:
+    rootfs: rootfs.tar
+    target: ["python","/app.py"]
+
