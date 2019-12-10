@@ -20,5 +20,5 @@ app:
 
   startup:
     rootfs: rootfs.tar
-    target: ["python","/app.py"]
+    target: ["python3","/usr/modbus2mqtt/app.py"]
 

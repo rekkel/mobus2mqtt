@@ -137,7 +137,7 @@ while True:
 			
 			
 			toBroker += "}"
-			print(f"Send to Broker ",  toBroker)
+			#print(f"Send to Broker ",  toBroker)
 			
 			#(rc, mid) = mqttc.publish("modbus/coils", json.dumps(convert(regs)), qos=2)
 			(rc, mid) = mqttc.publish("modbus/coils", toBroker, qos=2)
